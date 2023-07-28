@@ -71,7 +71,10 @@ custom_font = (font_family, font_size, font_weight)
 output_type_choice = tk.Label(root, text="Choose your output format", font=custom_font, fg="blue")
 output_type_choice.pack()
 
-options = ["geojson", "gpkg", "shp", "csv"]
+supported_format = tk.Label(root, text="Supported format input : .shp, .geojson, .gpkg, .kml/.kmz, .mif/.tab, .dfx, .csv , .json, .gpx, .sqlite/.db", font=("Arial", 10), fg="gray")
+supported_format.pack()
+
+options = ["geojson", "gpkg", "shp", "csv", "dfx"]
 
 # Variable to store the selected option
 option_var = tk.StringVar()

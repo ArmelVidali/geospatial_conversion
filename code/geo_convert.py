@@ -10,7 +10,8 @@ def import_data(path, output_format =False, target_crs = False):
         path = path.replace("\\", "/")
         file_name = path[path.rfind("/")+1:path.rfind(".")]
             
-        output_path = path[:path.rfind("/")] + "/geoconvert_to_" + str(output_format) 
+        output_path = path[:path.rfind("/")] + "/geoconvert_to_" + str(output_format) + "/"
+
     
         
         if os.path.isdir(output_path):
