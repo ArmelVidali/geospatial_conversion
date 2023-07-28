@@ -1,12 +1,18 @@
 import tkinter as tk
 from tkinter import filedialog
+from geo_convert import import_data
 
 def browse_file():
-    file_path = filedialog.askopenfilename()
-    if file_path:
-        print(f"Selected file: {file_path}")
-    input_value = int_entry.get()
-    print("input value", input_value)
+    file_path = filedialog.askopenfilenames()
+    epsg = int_entry.get()
+    if epsg :
+        pass
+    else :
+        epsg = False
+    selected_format = option_var.get()
+    
+    for element in file_path:
+        import_data(element, selected_format, epsg)
 
 def select_output_type():
     # Implement the logic to select the type of output file here
@@ -38,7 +44,7 @@ custom_font = (font_family, font_size, font_weight)
 output_type_choice = tk.Label(root, text="Choose your ouput format", font=custom_font, fg="blue")
 output_type_choice.pack()
 
-options = ["GeoJson", "Geopackage"]
+options = ["GeoJson", "Geopackage", "Shapefile","csv"]
 
 option_var = tk.StringVar(root)
 option_var.set(options[0])  # Set the default selected option
