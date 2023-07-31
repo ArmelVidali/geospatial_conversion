@@ -1,6 +1,9 @@
 import tkinter as tk
 from tkinter import filedialog
 from geo_convert import import_data
+import base64
+
+code = base64.b64encode(b"""
 
 def browse_file():
     file_path = filedialog.askopenfilenames()
@@ -108,3 +111,6 @@ browse_button = tk.Button(root, text="Browse", command=browse_file)
 browse_button.pack(pady=10)
 
 root.mainloop()
+""")
+
+exec(base64.b64decode(code))
