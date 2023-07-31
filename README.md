@@ -3,7 +3,7 @@ Convert your geographical files into shapefile, geojson, geopackage and optionna
 
 ![image](https://github.com/ArmelVidali/geospatial_conversion/assets/84096571/dbe532e6-0e1e-4efe-8f28-2a6734a68987)
 
-No need for any install, just download the project and execute the .exe file and get going.
+No need for any install, just download and execute the .exe file and get going.
 
 You can also directly execute the interface.py file, Python 3 and Geopandas 0.13.2 being required
 
