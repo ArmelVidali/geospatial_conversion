@@ -1,5 +1,5 @@
 ## Geographic file converter
-Convert your geographical files into shapefile, geojson, geopackage and optionnaly reproject into another coordinate reference system using a compiled Python ugly (yet working) GUI.
+Convert your geographical files into shapefile, geojson, geopackage and optionnaly reproject into another coordinate reference system using a compiled Python TKinter GUI, compiled using <a href="https://pypi.org/project/pyinstaller/">Pyinstaller</a>
 
 ![image](https://github.com/ArmelVidali/geospatial_conversion/assets/84096571/dbe532e6-0e1e-4efe-8f28-2a6734a68987)
 
