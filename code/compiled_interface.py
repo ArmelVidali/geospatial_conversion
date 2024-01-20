@@ -1,11 +1,13 @@
-import tkinter as tk
-from tkinter import ttk
-from tkinter import filedialog
-from geo_convert import import_data
-import geopandas as gpd
-import time
 import os
+import tkinter as tk
+from tkinter import filedialog
+from tkinter import ttk
+import geopandas as gpd
+from geo_convert import import_data
 import base64
+
+
+code = base64.b64encode(b"""
 
 # Store the files read by Geopandas along with their fields for later extraction
 uploaded_files_fields = {}
@@ -48,7 +50,7 @@ def browse_file():
 
 def show_upload_popup(loaded_layers_name, selected_format, epsg):
     popup = tk.Toplevel(root)
-    popup.title("Couche chargées")
+    popup.title("Couche chargees")
     popup.geometry("1080x900")
     epsg_display = "No EPSG selected"
 
@@ -220,3 +222,7 @@ browse_button = tk.Button(root, text="Browse", command=browse_file)
 browse_button.pack(pady=10)
 
 root.mainloop()
+
+""")
+
+exec(base64.b64decode(code))
